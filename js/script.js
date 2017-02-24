@@ -90,40 +90,35 @@ $(function() {
 
     
 });
-$(document).ready(function() {
-    $(".fancybox-media").fancybox({
-        
-    fitToView: false, // to show videos in their own size
-    content: '<span></span>', // create temp content
-    scrolling: 'no', // don't show scrolling bars in fancybox
-    afterLoad: function () {
-      // get dimensions from data attributes
-      var $width = $(this.element).data('width'); 
-      var $height = $(this.element).data('height');
-      // replace temp content
-      this.content = "<embed src='js/jwplayer.swf?file=" + this.href + "&autostart=true&amp;wmode=opaque' type='application/x-shockwave-flash' width='" + $width + "' height='" + $height + "'></embed>"; 
-    }
-  });
-});
-function playVideo(videoUrl){
-//      var options = {
-//        orientation: 'landscape',
-//          initFullscreen: false,
-//          bgColor: "#FFFFFF"
-//      };
-    var path = cordova.file.applicationDirectory + "www"+videoUrl;
-    var options = {
-        successCallback: function () {
-            console.log("Video was closed without error.");
-        },
-        errorCallback: function (errMsg) {
-            console.log("Error! " + errMsg);
-        },
-        orientation: 'landscape'
-    };
-    window.plugins.streamingMedia.playVideo(path);
-//     window.plugins.streamingMedia.playVideo(videoUrl,options);
-}
+//$(document).ready(function() {
+////    $(".fancybox-media").fancybox({
+////        
+////    fitToView: false, // to show videos in their own size
+////    content: '<span></span>', // create temp content
+////    scrolling: 'no', // don't show scrolling bars in fancybox
+////    afterLoad: function () {
+////      // get dimensions from data attributes
+////      var $width = $(this.element).data('width'); 
+////      var $height = $(this.element).data('height');
+////      // replace temp content
+////      this.content = "<embed src='js/jwplayer.swf?file=" + this.href + "&autostart=true&amp;wmode=opaque' type='application/x-shockwave-flash' width='" + $width + "' height='" + $height + "'></embed>"; 
+////    }
+////  });
+//    $("#productVideo").hide();
+//});
+//function playVideo(){
+//    $("#productVideo").show();
+//    var elem = document.getElementById("productVideo"); 
+//    
+//    elem.play();
+//    if (elem.requestFullscreen) {
+//      elem.requestFullscreen();
+//    } else if (elem.mozRequestFullScreen) {
+//      elem.mozRequestFullScreen();
+//    } else if (elem.webkitRequestFullscreen) {
+//      elem.webkitRequestFullscreen();
+//    }
+//}
 function fadeTransition(){
         var options = {
           "duration"       :  700, // in milliseconds (ms), default 400

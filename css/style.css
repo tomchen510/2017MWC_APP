@@ -172,3 +172,10 @@ body {
     right: 0px;
     top: 365px;
 }
+
+#html5-watermark{
+    display: none !important;
+}
+.html5boxSeekerPlay{
+    background-color: #488b62 !important;
+}
